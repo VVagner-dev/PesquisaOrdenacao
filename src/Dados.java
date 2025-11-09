@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Dados {
 
-    public static ArrayList<Reserva> lerArquivo(String caminho) {
+    public ArrayList<Reserva> lerArquivo(String caminho) {
         ArrayList<Reserva> lista = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(caminho))) {
             String linha;
@@ -28,7 +28,7 @@ public class Dados {
         return lista;
     }
 
-    public static void salvarArquivo(ArrayList<Reserva> lista) {
+    public void salvarArquivo(ArrayList<Reserva> lista) {
         String caminho = "";
         try (PrintWriter pw = new PrintWriter(new FileWriter(caminho))) {
             for (Reserva r : lista) {
